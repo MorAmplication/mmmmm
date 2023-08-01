@@ -31,7 +31,7 @@ async function seed(bcryptSalt: Salt) {
     roles: ["user"],
   };
 
-  await client.user.upsert({
+  await client.mor.upsert({
     where: {
       username: data.username,
     },
