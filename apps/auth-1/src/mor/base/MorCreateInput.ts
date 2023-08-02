@@ -11,20 +11,31 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString } from "class-validator";
-import { IsJSONValue } from "@app/custom-validators";
-import { GraphQLJSON } from "graphql-type-json";
-import { InputJsonValue } from "../../types";
+import { IsString, IsOptional } from "class-validator";
 
 @InputType()
 class MorCreateInput {
   @ApiProperty({
-    required: true,
+    required: false,
     type: String,
   })
   @IsString()
-  @Field(() => String)
-  username!: string;
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  username?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  roles?: string | null;
 
   @ApiProperty({
     required: true,
@@ -33,13 +44,6 @@ class MorCreateInput {
   @IsString()
   @Field(() => String)
   password!: string;
-
-  @ApiProperty({
-    required: true,
-  })
-  @IsJSONValue()
-  @Field(() => GraphQLJSON)
-  roles!: InputJsonValue;
 }
 
 export { MorCreateInput as MorCreateInput };

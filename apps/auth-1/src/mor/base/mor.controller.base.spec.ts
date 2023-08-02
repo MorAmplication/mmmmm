@@ -23,6 +23,7 @@ const CREATE_INPUT = {
   createdAt: new Date(),
   updatedAt: new Date(),
   username: "exampleUsername",
+  roles: "exampleRoles",
   password: "examplePassword",
 };
 const CREATE_RESULT = {
@@ -30,6 +31,7 @@ const CREATE_RESULT = {
   createdAt: new Date(),
   updatedAt: new Date(),
   username: "exampleUsername",
+  roles: "exampleRoles",
   password: "examplePassword",
 };
 const FIND_MANY_RESULT = [
@@ -38,6 +40,7 @@ const FIND_MANY_RESULT = [
     createdAt: new Date(),
     updatedAt: new Date(),
     username: "exampleUsername",
+    roles: "exampleRoles",
     password: "examplePassword",
   },
 ];
@@ -46,6 +49,7 @@ const FIND_ONE_RESULT = {
   createdAt: new Date(),
   updatedAt: new Date(),
   username: "exampleUsername",
+  roles: "exampleRoles",
   password: "examplePassword",
 };
 
