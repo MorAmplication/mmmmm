@@ -1,7 +1,5 @@
-import { InputJsonValue } from "../../types";
-
 export type MorCreateInput = {
-  username: string;
+  username?: string | null;
+  roles?: string | null;
   password: string;
-  roles: InputJsonValue;
 };

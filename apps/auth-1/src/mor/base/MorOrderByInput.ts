@@ -72,7 +72,7 @@ class MorOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  password?: SortOrder;
+  roles?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -83,7 +83,7 @@ class MorOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  roles?: SortOrder;
+  password?: SortOrder;
 }
 
 export { MorOrderByInput as MorOrderByInput };
